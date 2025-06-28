@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #9fc9e5;
+  padding: 2rem;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.calculator {
+  flex: 1;
+  background: whitesmoke;
+  line-height: 2;
+  padding: 3rem;
+}
+
+.results {
+    flex: 1;
+    background: #182c3f;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear {
+  font-size: 0.9rem;
+  float: right;
+  color: #666;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-group span {
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45px;
+  background: #7eec7b;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 0 0 6px;
+  border-right: 1px solid #ccc;
+  z-index: 2;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px 10px 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.input-group.right span {
+  left: unset;
+  right: 0;
+  border-radius: 0 6px 6px 0;
+  border-left: 1px solid #ccc;
+  border-right: none;
+}
+
+.input-group.right input {
+  padding-left: 12px;
+  padding-right: 50px;
+}
+
+
+input[type="number"],
+input[type="text"] {
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:hover,
+input[type="text"]:hover {
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+input[type="radio"]:hover {
+        border-color:blue;
+        background-color: azure ;
+    }
+
+.radio-group input {
+  margin-right: 0.3rem;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #cce200;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.results h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#results .output {
+  margin-top: 1rem;
+  background: #2e4053;
+  border-top: 4px solid #00ff00;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.currency-convert {
+  margin-top: 1rem;
+}
+
+.currency-convert select {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}

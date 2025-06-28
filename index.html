@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="load.css" />
+</head>
+<body>
+  <div class="loader">
+    <div class="loader-inner">
+      <div class="loader-line-wrap"><div class="loader-line"></div></div>
+      <div class="loader-line-wrap"><div class="loader-line"></div></div>
+      <div class="loader-line-wrap"><div class="loader-line"></div></div>
+      <div class="loader-line-wrap"><div class="loader-line"></div></div>
+      <div class="loader-line-wrap"><div class="loader-line"></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="calculator">
+      <h2>HouseBudget<span class="clear" onclick="clearAll()">Clear All</span></h2>
+
+      <label>Mortgage Amount</label>
+      <div class="input-group">
+        <span>£</span>
+        <input type="number" id="amount" />
+      </div>
+
+    <div class="flex-group">
+    <div>
+      <label>Mortgage Term</label>
+      <div class="input-group right">
+        <input type="number" id="term" />
+        <span>years</span>
+      </div>
+    </div>
+      <div>
+        <label>Interest Rate</label>
+        <div class="input-group right">
+          <input type="number" id="rate" step="0.01" />
+          <span>%</span>
+        </div>
+      </div>
+    </div>
+
+      <label>Mortgage Type</label>
+      <div class="radio-group">
+        <label><input type="radio" name="type" value="repayment" /> Repayment</label>
+        <label><input type="radio" name="type" value="interest" /> Interest Only</label>
+      </div>
+
+      <button onclick="calculateRepayments()">Calculate Repayments</button>
+    </div>
+      <div class="results" id="results">
+          <img src="image.png" height="300" width="300" />
+          <h3>Results shown here</h3>
+          <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="load.js"></script>
+</body>
+</html>
